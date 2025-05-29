@@ -54,50 +54,94 @@ git push -u  origin new-branch
 ### Creating and Switching Branches
 - Create a New Branch
 ``` bash 
-git branch feature-b
+git branch to-the-exiles
 ```
 - Or create and switch to the branch in one command
 ```
 bash 
-git checkout -b feature-b
+git checkout -b to-the -exiles
 ```
 ## Switch Between Branches
 - Switch to the main branch
 ``` bash
 git checkout new-branch
 ```
-## Switch to feature-b
+## Switch to to-the-exiles
 ``` bash
-git checkout feature-b
+git checkout 
 ```
 ## switch to previous branch
 ``` bash 
 git checkout -
 ```
-### Make changes in feature-branch, commit, and push
+### Make changes in to-the-exiles, commit, and push
 ```
 bash
 echo "Feature notes" >> notes.txt
 git add notes.txt
-git commit -m "Add feature notes in feature-branch"
-git push -u origin feature-b
+git commit -m "Add feature notes in to-the-exiles"
+git push -u origin to-the-exiles
 ```
 ## Resolving Merge Conflicts
 - Create a Conflict
+- In new-branch, edit notes.txt
 ``` bash
-git checkout main
+git checkout new-branch
 echo "Main branch changes" >> notes.txt
 git add notes.txt
-git commit -m "Update notes in main"
-git push origin main
+git commit -m "Update notes in new-branch"
+git push  -u origin to-the-exiles
 ```
-## Switch to feature-branch and edit the same line in notes.txt
+## Switch to to-the-exiles and edit the same line in notes.txt
 ``` bash 
 git checkout feature-branch
-echo "Feature branch changes" >> notes.txt
+echo "to-the-exiles changes" >> notes.txt
 git add notes.txt
-git commit -m "Update notes in feature-branch"
-git push origin feature-branch
+git commit -m "Update notes in to-the-exiles"
+git push -u origin to-the-exiles 
+```
+## Merge with Conflict
+- Switch to new-branch and attempt to merge to-the-exiles:
+``` bash
+git checkout new-branch
+git merge to-the-exiles
+```
+- Git will indicate a conflict in notes.txt.
+- Resolve the Conflict
+- Open notes.txt in a text editor. You'll see conflict markers: ``` <<<<<<< HEAD new-branch changes, to-the-exiles changes,to-the-exiles ```
+- Edit the file to keep desired changes (e.g., combine both)
+- Stage and commit the resolved file
+``` bash 
+git add notes.txt
+git commit -m "Resolve merge conflict in notes.txt"
+git push -u origin new-branch
+```
+- Delete the Feature Branch (optional)
+``` bash 
+git branch -d to-the-exiles
+git push origin --delete to-the-exiles
+```
+## Cloning a Repository
+- Copy the repository URL from GitHub (e.g., https://github.com/rahim8050/TestProject).
+## Clone the repository to your local machine
+-create a folder on where you want to clone the repository
+- open the folder with gitbash
+## run the following command
+``` bash
+ git clone https://github.com/rahim8050/TestProject
+```
+- Navigate to the cloned folder
+ ``` bash 
+ cd TestProject
+ ```
+ ## Forking a Repository
+ - Go to the repository you want to fork on GitHub (e.g., https://github.com/rahim8050/TestProject ).
+
+
+
+
+
+
 
 
 
