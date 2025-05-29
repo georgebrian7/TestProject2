@@ -94,7 +94,7 @@ git push  -u origin to-the-exiles
 ```
 ## Switch to to-the-exiles and edit the same line in notes.txt
 ``` bash 
-git checkout feature-branch
+git checkout to-the-exiles
 echo "to-the-exiles changes" >> notes.txt
 git add notes.txt
 git commit -m "Update notes in to-the-exiles"
@@ -116,7 +116,7 @@ git add notes.txt
 git commit -m "Resolve merge conflict in notes.txt"
 git push -u origin new-branch
 ```
-- Delete the Feature Branch (optional)
+- Delete the to-the-exiles (optional)
 ``` bash 
 git branch -d to-the-exiles
 git push origin --delete to-the-exiles
@@ -136,6 +136,29 @@ git push origin --delete to-the-exiles
  ```
  ## Forking a Repository
  - Go to the repository you want to fork on GitHub (e.g., https://github.com/rahim8050/TestProject ).
+
+ - Select your account as the destination for the forked repository.
+ - Clone your forked repository to your local machine
+ ``` bash
+ git clone https://github.com/rahim8050/TestProject
+ ```
+ - Make changes, commit, and push to your forked repository
+ ``` bash
+ cd TestProject
+echo "My changes" >> notes.txt
+git add notes.txt
+git commit -m "Add my changes to forked repo"
+git push origin new-branch
+```
+- Create a pull request to contribute changes back to the original repository
+- Go to your forked repository on GitHub.
+- Click Contribute and select Open pull request.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+This README provides a step-by-step guide to essential GitHub workflows. Feel free to contribute by forking this repository and submitting a pull request! For questions, open an issue or contact the repository owner.
 
 
 
