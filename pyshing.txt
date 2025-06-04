@@ -1,1 +1,1 @@
-trying if git push alone will allow me to push my code to  github with a conflict imagining how it could be rosolved
+trying if git push alone will allow me to push my code to  github with a conflict imagining how it could be resolved

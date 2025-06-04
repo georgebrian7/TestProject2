@@ -4,3 +4,4 @@ main branch changes
 
 to-the-exiles changes
 
+added notes to the forked branch 
